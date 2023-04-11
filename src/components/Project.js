@@ -2,24 +2,16 @@ import React from "react";
 import {useState} from "react";
 
 const Project=()=>{
-
-   
-
-    const [content,setContent]=useState([{title:"",description:"",skills:""}]);
-
-   
-
+ const [content,setContent]=useState([{title:"",description:"",skills:""}]);
     const add=(e)=>{
-        e.preventDefault();
-        
+        e.preventDefault();      
         content.map((val,i)=>
         {
         console.log(val.title);
         console.log(val.description);
         console.log(val.skills);
        
-        });
-        
+        });      
         setContent([{title:"",description:"",skills:""}]);
         
     };
@@ -35,17 +27,13 @@ const Project=()=>{
     setContent(onChangeValue);
    
  };
-  
-  
-
-    return(
+   return(
         <div>
             
              <div className="d-flex justify-content-center">
              <div className="shadow rounded col-sm-9 px-5 pt-5 mx-5 ">
            <center><h1 className="text-center pt-3 text-primary h2 pb-5"><u>Project Details</u></h1></center>
-         <form onSubmit={add}>
-            
+         <form onSubmit={add}>      
             {
                 content.map((val,i)=>
                 <div>

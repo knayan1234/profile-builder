@@ -1,18 +1,10 @@
 import React, { useState } from "react";
 
-
 const Education=()=>{
-
-   
-    const [data,setData]=useState({course:"",college:"",date:"",loc:""});
-
-     const change=(e)=>{
-       
-        setData({ ...data, [e.target.name]: e.target.value });
-
-       
+  const [data,setData]=useState({course:"",college:"",date:"",loc:""});
+     const change=(e)=>{     
+        setData({ ...data, [e.target.name]: e.target.value });      
      };
-
      const check=(e)=>{
         e.preventDefault();
         console.log(data);
@@ -34,18 +26,15 @@ const Education=()=>{
           
            <label for="formGroupExampleInput">Passout Year : &nbsp;</label>
             <select name="date"  className="form-group form-group-lg" onChange={change}>
-            <option value=" ">select</option>
-
-            
+            <option value=" ">select</option>          
              <option value="2000">2000</option>
-             <option value="2001">2001</option>
+             <option value="2001">2001</option>  
              <option value="2002">2002</option>
              <option value="2003">2003</option>
              <option value="2004">2004</option>
              <option value="2005">2005</option>
             </select>
-
-           <div class="form-group">
+            <div class="form-group">
                 <label for="formGroupExampleInput">Location</label>
                 <input type="text" name="loc" class="form-control" id="formGroupExampleInput" placeholder="Enter Location Details" onChange={change}/>
            </div>
@@ -57,7 +46,5 @@ const Education=()=>{
         </div>
      </div>
     );
-
 };
-
 export default Education;
