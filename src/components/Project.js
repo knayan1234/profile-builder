@@ -1,7 +1,8 @@
 import React from "react";
 // import {useState} from "react";
 // import project_data from './project_data.json';
-import user_data from './user_data.json'
+import user_data from './user_data.json';
+import {Link} from "react-router-dom";
 
 const Project=()=>{
 //  const [content,setContent]=useState([{title:"",description:"",skills:""}]);
@@ -63,7 +64,8 @@ const Project=()=>{
             {/* } */}
             <div className="text-center">
              {/* <button class="btn btn-primary" type="button" onClick={new_field}>Add Another Entry</button>&nbsp; */}
-            <button class="btn btn-primary" type="submit">Submit</button>
+             <Link to='/aboutme'><button class="btn btn-primary" type="submit">Back</button></Link>&nbsp;
+             <Link to='/education'> <button class="btn btn-primary" type="submit">Next</button></Link>
             </div>
         </form>
         </div>
